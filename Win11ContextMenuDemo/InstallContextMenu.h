@@ -3,11 +3,11 @@
 
 namespace Win11ContextMenuDemo::InstallContextMenu
 {
-    // 安裝上下文選單的函數。
+    // 安装上下文菜单的函数。
     // Function to install the context menu.
     HRESULT InstallContextMenu();
 
-    // 解除安裝上下文選單的函數。
+    // 卸载上下文菜单的函数。
     // Function to uninstall the context menu.
     HRESULT UnInstallContextMenu();
 }

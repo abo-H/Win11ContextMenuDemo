@@ -1,1 +1,0 @@
-regsvr32.exe /u Win11ContextMenuDemo.dll

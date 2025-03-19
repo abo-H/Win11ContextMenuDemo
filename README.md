@@ -44,7 +44,7 @@ Visual Studio 2022 需要安裝以下 NuGet 套件：
 3. **產生 Sparse package**：
    使用以下命令來產生 Sparse package：
     ```
-    makeappx.exe pack /d <Your AppxPath> /p <Your AppxPath>\Win11ContextMenuDemo.msix
+    "D:\Windows Kits\10\bin\10.0.22621.0\x64\makeappx.exe" pack /d D:\GitHub\Win11ContextMenuDemo\SparsePackage /p D:\GitHub\Win11ContextMenuDemo\SparsePackage\Win11ContextMenuDemo.msix
     ```
 
 4. **建立自簽名憑證**：
@@ -70,13 +70,13 @@ Visual Studio 2022 需要安裝以下 NuGet 套件：
 將自簽名憑證導出為 .pfx 檔案：
     ```
     $password = ConvertTo-SecureString -String <Your Password> -Force -AsPlainText
-    Export-PfxCertificate -cert "Cert:\CurrentUser\My\<Your Thumbprint>" -FilePath <Certificate FilePath>.pfx -Password $password
+    Export-PfxCertificate -cert "Cert:\CurrentUser\My\FFD8C1B9A9FCA901E0A9DAA2A3EA4EF44D667CD3" -FilePath D:\temp\test.pfx -Password $password
     ```
 
 8. **簽署 Sparse package**：
 使用以下命令簽署 Sparse package： 
     ```
-    signtool.exe sign /fd SHA256 /a /f <Your AppxPath>\Win11ContextMenu.pfx /t http://timestamp.digicert.com /p <Your Password> <Your AppxPath>\Win11ContextMenuDemo.msix
+    "D:\Windows Kits\10\bin\10.0.22621.0\x64\signtool.exe" sign /fd SHA256 /a /f D:\temp\test.pfx /t http://timestamp.digicert.com /p 123123 D:\GitHub\Win11ContextMenuDemo\SparsePackage\Win11ContextMenuDemo.msix
     ```
     如果需要進入debug模式可以添加`/debug`參數。
 <br>

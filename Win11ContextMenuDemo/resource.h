@@ -1,10 +1,9 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ 產生的 Include 檔案。
+// Microsoft Visual C++ 生成的 Include 文件。
 // 由 Win11ContextMenuDemo.rc 使用
 //
 #define ID_WIN11CONTEXTMENUDEMO_DEFAULT                101
 #define ID_WIN11CONTEXTMENUDEMO_MAIN                   102
-#define ID_WIN11CONTEXTMENUDEMO_SUB1                   103
 
 // Next default values for new objects
 // 

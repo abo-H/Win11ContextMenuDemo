@@ -1,3 +1,12 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Abo
+ * @Date: 2025-03-19 21:39:41
+ * @LastEditors: Abo
+ * @LastEditTime: 2025-03-19 23:41:42
+ * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\InstallContextMenu.cpp
+ */
 #include "pch.h"
 #include "InstallContextMenu.h"
 #include "Windows11Checker.h"
@@ -18,7 +27,7 @@ const wstring REGISTRYSHELLEXTENSIONPATH = L"Software\\Classes\\*\\shellex\\Cont
 const wstring REGISTRYCLSIDPATH = L"Software\\Classes\\CLSID\\";
 const wstring REGISTRYFILESHELLEXPATH = L"_file\\shellex";
 
-// 獲取特定的 Sparse Package。
+// 获取特定的 Sparse Package。
 // Gets a specific Sparse Package.
 Package GetSparsePackage(PackageManager& packageManager)
 {
@@ -42,7 +51,7 @@ Package GetSparsePackage(PackageManager& packageManager)
 	return nullptr;
 }
 
-// 取消註冊 Sparse Package。
+// 取消注册 Sparse Package。
 // Unregisters the Sparse Package.
 HRESULT UnRegisterSparsePackage()
 {
@@ -65,7 +74,7 @@ HRESULT UnRegisterSparsePackage()
 	return S_OK;
 }
 
-// 註冊 Sparse Package。
+// 注册 Sparse Package。
 // Registers the Sparse Package.
 HRESULT RegisterSparsePackage()
 {
@@ -91,7 +100,7 @@ HRESULT RegisterSparsePackage()
 	return S_OK;
 }
 
-// 執行註冊 Sparse Package 的程序。
+// 执行注册 Sparse Package 的程序。
 // Executes the procedure for registering the Sparse Package.
 void RegisterSparsePackageProgram()
 {
@@ -100,7 +109,7 @@ void RegisterSparsePackageProgram()
 	RegisterSparsePackage();
 }
 
-// 執行取消註冊 Sparse Package 的程序。
+// 执行取消注册 Sparse Package 的程序。
 // Executes the procedure for unregistering the Sparse Package.
 void UnRegisterSparsePackageProgram()
 {
@@ -108,7 +117,7 @@ void UnRegisterSparsePackageProgram()
 	UnRegisterSparsePackage();
 }
 
-// 獲取 COM 類別的 CLSID 字串。
+// 获取 COM 类别的 CLSID 字符串。
 // Gets the CLSID string for a COM class.
 wstring GetCLSIDString()
 {
@@ -124,7 +133,7 @@ wstring GetCLSIDString()
 	return clsid;
 }
 
-// 註冊上下文選單。
+// 注册上下文菜单。
 // Registers the context menu.
 HRESULT RegisterContextMenu()
 {
@@ -144,7 +153,7 @@ HRESULT RegisterContextMenu()
 	return S_OK;
 }
 
-// 取消註冊上下文選單。
+// 取消注册上下文菜单。
 // Unregisters the context menu.
 HRESULT UnRegisterContextMenu()
 {

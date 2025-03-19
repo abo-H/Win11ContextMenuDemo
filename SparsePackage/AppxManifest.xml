@@ -32,7 +32,7 @@
       <Extensions>
         <desktop4:Extension Category="windows.fileExplorerContextMenus">
           <desktop4:FileExplorerContextMenus>
-            <desktop5:ItemType Type="Directory\Background">
+            <desktop5:ItemType Type="*">
               <desktop5:Verb Id="MainMenuWithWin11ContextMenuDemo" Clsid="15589FA6-768B-4826-97B8-D12DE265B3BB" />
             </desktop5:ItemType>
           </desktop4:FileExplorerContextMenus>

@@ -124,12 +124,8 @@
       <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y "$(TargetPath)" "$(ProjectDir)..\SparsePackage\"
-regsvr32.exe "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
+      <Command>xcopy /Y "$(TargetPath)" "$(ProjectDir)..\SparsePackage\"</Command>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>regsvr32.exe /u "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -152,17 +148,12 @@ regsvr32.exe "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
       <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y "$(TargetPath)" "$(ProjectDir)..\SparsePackage\"
-regsvr32.exe "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
+      <Command>xcopy /Y "$(TargetPath)" "$(ProjectDir)..\SparsePackage\"</Command>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>regsvr32.exe /u "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BaseExplorerCommand.h" />
     <ClInclude Include="ClassFactory.h" />
-    <ClInclude Include="EnumExplorerCommand.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="InstallContextMenu.h" />
     <ClInclude Include="MainExplorerCommand.h" />
@@ -170,13 +161,11 @@ regsvr32.exe "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
     <ClInclude Include="pch.h" />
     <ClInclude Include="RegistryController.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Sub1ExplorerCommand.h" />
     <ClInclude Include="Windows11Checker.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseExplorerCommand.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="EnumExplorerCommand.cpp" />
     <ClCompile Include="InstallContextMenu.cpp" />
     <ClCompile Include="MainExplorerCommand.cpp" />
     <ClCompile Include="Path.cpp" />
@@ -187,7 +176,6 @@ regsvr32.exe "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RegistryController.cpp" />
-    <ClCompile Include="Sub1ExplorerCommand.cpp" />
     <ClCompile Include="Windows11Checker.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -204,7 +192,7 @@ regsvr32.exe "$(ProjectDir)..\SparsePackage\$(ProjectName).dll"</Command>
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+      <ErrorText>此项目引用了此计算机上缺少的 NuGet 包。请启用 NuGet 包还原以下载该包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.230706.1\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.230706.1\build\native\Microsoft.Windows.CppWinRT.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.230706.1\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.230706.1\build\native\Microsoft.Windows.CppWinRT.targets'))" />
