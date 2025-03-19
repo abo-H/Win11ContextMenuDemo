@@ -5,12 +5,15 @@
 // Windows 标头文件
 #include <windows.h>
 #include <aclapi.h>
+#include <atlbase.h>
 #include <shlwapi.h>
 #include <shlobj.h>
 #include <shobjidl_core.h>
 #include <string>
 #include <stdexcept>
 #include <filesystem>
+#include <shellapi.h>
+#include <libloaderapi.h>
 
 // WinRT
 #include "winrt/base.h"
