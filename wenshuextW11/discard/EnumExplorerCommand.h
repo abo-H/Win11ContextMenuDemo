@@ -5,12 +5,12 @@
  * @Date: 2025-03-19 21:39:41
  * @LastEditors: Abo
  * @LastEditTime: 2025-03-19 23:43:08
- * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\EnumExplorerCommand.h
+ * @FilePath: \wenshuextW11\wenshuextW11\EnumExplorerCommand.h
  */
 #pragma once
 #include "pch.h"
 
-namespace Win11ContextMenuDemo::ExplorerCommand
+namespace wenshuextW11::ExplorerCommand
 {
     // EnumExplorerCommand 是一个类，用于实现 IEnumExplorerCommand 接口，用于枚举 IExplorerCommand 对象。
     // EnumExplorerCommand is a class that implements the IEnumExplorerCommand interface for enumerating IExplorerCommand objects.

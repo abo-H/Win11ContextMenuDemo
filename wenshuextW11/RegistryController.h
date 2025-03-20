@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 
-namespace Win11ContextMenuDemo::RegistryController
+namespace wenshuextW11::RegistryController
 {
     // RegistryControllerClass 用于访问和修改 Windows 注册表。
     // RegistryControllerClass is used for accessing and modifying the Windows registry.

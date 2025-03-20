@@ -5,7 +5,7 @@
  * @Date: 2025-03-19 21:39:41
  * @LastEditors: Abo
  * @LastEditTime: 2025-03-19 23:41:42
- * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\InstallContextMenu.cpp
+ * @FilePath: \wenshuextW11\wenshuextW11\InstallContextMenu.cpp
  */
 #include "pch.h"
 #include "InstallContextMenu.h"
@@ -14,14 +14,14 @@
 #include "RegistryController.h"
 #include "MainExplorerCommand.h"
 
-using namespace Win11ContextMenuDemo::RegistryController;
+using namespace wenshuextW11::RegistryController;
 using namespace winrt::Windows::Management::Deployment;
 using namespace winrt::Windows::ApplicationModel;
 using namespace winrt::Windows::Foundation;
 using namespace winrt::Windows::Foundation::Collections;
 
 
-const wstring CONTEXTMENUNAME = L"Win11ContextMenuDemo";
+const wstring CONTEXTMENUNAME = L"wenshuextW11";
 const wstring REGISTRYSHELLPATH = L"Software\\Classes\\*\\shell\\";
 const wstring REGISTRYSHELLEXTENSIONPATH = L"Software\\Classes\\*\\shellex\\ContextMenuHandlers\\";
 const wstring REGISTRYCLSIDPATH = L"Software\\Classes\\CLSID\\";
@@ -78,7 +78,7 @@ HRESULT UnRegisterSparsePackage()
 // Registers the Sparse Package.
 HRESULT RegisterSparsePackage()
 {
-	const wstring contextMenuDirectoryPath = Win11ContextMenuDemo::Path::GetContextMenuDirectoryPath();
+	const wstring contextMenuDirectoryPath = wenshuextW11::Path::GetContextMenuDirectoryPath();
 	const wstring sparsePackageFullPath = contextMenuDirectoryPath + L"\\" + CONTEXTMENUNAME + L".msix";
 
 	Uri externalLocationUri(contextMenuDirectoryPath);
@@ -121,7 +121,7 @@ void UnRegisterSparsePackageProgram()
 // Gets the CLSID string for a COM class.
 wstring GetCLSIDString()
 {
-	const auto uuid = __uuidof(Win11ContextMenuDemo::ExplorerCommand::MainExplorerCommand);
+	const auto uuid = __uuidof(wenshuextW11::ExplorerCommand::MainExplorerCommand);
 	LPOLESTR clsidString = nullptr;
 	HRESULT result = StringFromCLSID(uuid, &clsidString);
 	if (FAILED(result))
@@ -147,7 +147,7 @@ HRESULT RegisterContextMenu()
 	regClsidController.SetStringValue(L"", CONTEXTMENUNAME);
 
 	RegistryControllerClass regInProcController = regClsidController.GetSubKey(L"InProcServer32", true);
-	regInProcController.SetStringValue(L"", Win11ContextMenuDemo::Path::GetContextMenuExecutableFullPath());
+	regInProcController.SetStringValue(L"", wenshuextW11::Path::GetContextMenuExecutableFullPath());
 	regInProcController.SetStringValue(L"ThreadingModel", L"Apartment");
 
 	return S_OK;
@@ -185,11 +185,11 @@ HRESULT UnRegisterContextMenu()
 	return S_OK;
 }
 
-HRESULT Win11ContextMenuDemo::InstallContextMenu::InstallContextMenu()
+HRESULT wenshuextW11::InstallContextMenu::InstallContextMenu()
 {
 	HRESULT result;
 
-	if (Win11ContextMenuDemo::Windows11Checker::IsWindows11())
+	if (wenshuextW11::Windows11Checker::IsWindows11())
 	{
 		UnRegisterContextMenu();
 
@@ -204,7 +204,7 @@ HRESULT Win11ContextMenuDemo::InstallContextMenu::InstallContextMenu()
 	return S_OK;
 }
 
-HRESULT Win11ContextMenuDemo::InstallContextMenu::UnInstallContextMenu()
+HRESULT wenshuextW11::InstallContextMenu::UnInstallContextMenu()
 {
 	HRESULT result;
 
@@ -215,7 +215,7 @@ HRESULT Win11ContextMenuDemo::InstallContextMenu::UnInstallContextMenu()
 		return result;
 	}
 
-	if (Win11ContextMenuDemo::Windows11Checker::IsWindows11())
+	if (wenshuextW11::Windows11Checker::IsWindows11())
 	{
 		thread unRegisterSparsePackageThread(UnRegisterSparsePackageProgram);
 		unRegisterSparsePackageThread.join();

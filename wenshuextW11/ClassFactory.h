@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 
-namespace Win11ContextMenuDemo::ClassFactory
+namespace wenshuextW11::ClassFactory
 {
     // COMClassFactory 是一个模板类，用于实现 IClassFactory 接口。
     // COMClassFactory is a template class for implementing the IClassFactory interface.

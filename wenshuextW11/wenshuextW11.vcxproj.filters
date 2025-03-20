@@ -85,7 +85,7 @@
     <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Win11ContextMenuDemo.rc">
+    <ResourceCompile Include="wenshuextW11.rc">
       <Filter>头文件</Filter>
     </ResourceCompile>
   </ItemGroup>

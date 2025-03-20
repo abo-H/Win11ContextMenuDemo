@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 
-namespace Win11ContextMenuDemo::Windows11Checker
+namespace wenshuextW11::Windows11Checker
 {
     // 检查当前操作系统是否为 Windows 11。
     // Returns true if the current operating system is Windows 11, false otherwise.

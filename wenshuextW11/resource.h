@@ -1,9 +1,9 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ 生成的 Include 文件。
-// 由 Win11ContextMenuDemo.rc 使用
+// 由 wenshuextW11.rc 使用
 //
-#define ID_WIN11CONTEXTMENUDEMO_DEFAULT                101
-#define ID_WIN11CONTEXTMENUDEMO_MAIN                   102
+#define ID_wenshuextW11_DEFAULT                101
+#define ID_wenshuextW11_MAIN                   102
 
 // Next default values for new objects
 // 

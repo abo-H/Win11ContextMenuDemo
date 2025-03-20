@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 
-namespace Win11ContextMenuDemo::InstallContextMenu
+namespace wenshuextW11::InstallContextMenu
 {
     // 安装上下文菜单的函数。
     // Function to install the context menu.

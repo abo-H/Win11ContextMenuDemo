@@ -3,15 +3,15 @@
  * @version: 
  * @Author: Abo
  * @Date: 2025-03-19 21:39:41
- * @LastEditors: Abo
- * @LastEditTime: 2025-03-19 22:51:23
- * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\BaseExplorerCommand.h
+ * @LastEditors: HB
+ * @LastEditTime: 2025-03-20 15:46:15
+ * @FilePath: /wenshuextW11/wenshuextW11/discard/BaseExplorerCommand.h
  */
 #pragma once
 #include "pch.h"
 #include "resource.h"
 
-namespace Win11ContextMenuDemo::ExplorerCommand
+namespace wenshuextW11::ExplorerCommand
 {
     // BaseExplorerCommand 是一个基础类，用于实现 IExplorerCommand 接口。
     // BaseExplorerCommand is a base class for implementing the IExplorerCommand interface.
@@ -32,7 +32,7 @@ namespace Win11ContextMenuDemo::ExplorerCommand
 
         // 用于存储标题资源 ID 的成员变量。
         // Member variable to store the title resource ID.
-        UINT titleResourceID = ID_WIN11CONTEXTMENUDEMO_DEFAULT;
+        UINT titleResourceID = ID_wenshuextW11_DEFAULT;
 
         // 用于存储图标文件名的成员变量。
         // Member variable to store the icon file name.

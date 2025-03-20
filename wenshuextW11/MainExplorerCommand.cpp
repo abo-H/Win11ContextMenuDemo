@@ -1,23 +1,14 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: Abo
- * @Date: 2025-03-19 21:39:41
- * @LastEditors: Abo
- * @LastEditTime: 2025-03-20 00:46:56
- * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\MainExplorerCommand.cpp
- */
 #include "pch.h"
 #include "MainExplorerCommand.h"
 
-using namespace Win11ContextMenuDemo::ExplorerCommand;
+using namespace wenshuextW11::ExplorerCommand;
 
 // 全局变量，用来存储 DLL 模块的句柄。
 // Global variable to store the handle of the DLL module.
 extern HMODULE g_module; 
 
 MainExplorerCommand::MainExplorerCommand() {
-    SetTitleResourceID(ID_WIN11CONTEXTMENUDEMO_MAIN);
+    SetTitleResourceID(ID_wenshuextW11_MAIN);
     SetIconFileName(L"\\Assets\\MainIcon.ico");
 }
 
@@ -35,11 +26,6 @@ IFACEMETHODIMP MainExplorerCommand::Invoke(IShellItemArray* psiItemArray, IBindC
     }
 
     if (itemCount == 0) {
-        return S_OK;
-    }
-
-    if (itemCount > 10) {
-        MessageBoxW(nullptr, L"外发报备不能超过十个文件", L"提示", MB_OK | MB_ICONWARNING);
         return S_OK;
     }
 

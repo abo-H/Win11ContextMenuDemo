@@ -2,7 +2,7 @@
 #include "RegistryController.h"
 #include <sstream>
 
-using namespace Win11ContextMenuDemo::RegistryController;
+using namespace wenshuextW11::RegistryController;
 
 RegistryControllerClass::RegistryControllerClass(HKEY hKey, const std::wstring& subKey, REGSAM access, bool createIfMissing)
     : m_hKey(nullptr), m_regsam(access), m_originalHKey(hKey), m_originalSubKey(subKey)

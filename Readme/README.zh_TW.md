@@ -35,7 +35,7 @@ Visual Studio 2022 需要安装以下 NuGet 包：
 3. **生成 Sparse package**：
     使用以下命令生成 Sparse package：
      ```
-     makeappx.exe pack /d <Your AppxPath> /p <Your AppxPath>\Win11ContextMenuDemo.msix
+     makeappx.exe pack /d <Your AppxPath> /p <Your AppxPath>\wenshuextW11.msix
      ```
 
 4. **创建自签名证书**：
@@ -67,7 +67,7 @@ Visual Studio 2022 需要安装以下 NuGet 包：
 8. **签署 Sparse package**：
 使用以下命令签署 Sparse package： 
      ```
-     signtool.exe sign /fd SHA256 /a /f <Your AppxPath>\Win11ContextMenu.pfx /t http://timestamp.digicert.com /p <Your Password> <Your AppxPath>\Win11ContextMenuDemo.msix
+     signtool.exe sign /fd SHA256 /a /f <Your AppxPath>\Win11ContextMenu.pfx /t http://timestamp.digicert.com /p <Your Password> <Your AppxPath>\wenshuextW11.msix
      ```
      如果需要进入 debug 模式可以添加 `/debug` 参数。
 <br>

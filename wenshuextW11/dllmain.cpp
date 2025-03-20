@@ -5,7 +5,7 @@
  * @Date: 2025-03-19 21:39:41
  * @LastEditors: Abo
  * @LastEditTime: 2025-03-19 23:30:05
- * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\dllmain.cpp
+ * @FilePath: \wenshuextW11\wenshuextW11\dllmain.cpp
  */
 // dllmain.cpp : 定义 DLL 应用程序的入口点。
 #include "pch.h"
@@ -43,14 +43,14 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 // Register the DLL for context menu extension.
 STDAPI DllRegisterServer()
 {
-    return Win11ContextMenuDemo::InstallContextMenu::InstallContextMenu();
+    return wenshuextW11::InstallContextMenu::InstallContextMenu();
 }
 
 // 注销 DLL。
 // Unregister the DLL.
 STDAPI DllUnregisterServer()
 {
-    return Win11ContextMenuDemo::InstallContextMenu::UnInstallContextMenu();
+    return wenshuextW11::InstallContextMenu::UnInstallContextMenu();
 }
 
 // 返回一个类工厂以创建对象的实例。
@@ -59,11 +59,11 @@ _Use_decl_annotations_ STDAPI DllGetClassObject(REFCLSID rclsid, REFIID riid, LP
 {
     *ppv = nullptr;
 
-    if (rclsid == __uuidof(Win11ContextMenuDemo::ExplorerCommand::MainExplorerCommand))
+    if (rclsid == __uuidof(wenshuextW11::ExplorerCommand::MainExplorerCommand))
     {
         // 如果请求的是 MainExplorerCommand 的类工厂，则创建并返回。
         // Create and return the class factory if MainExplorerCommand is requested.
-        return winrt::make<Win11ContextMenuDemo::ClassFactory::COMClassFactory<Win11ContextMenuDemo::ExplorerCommand::MainExplorerCommand>>().as(riid, ppv);
+        return winrt::make<wenshuextW11::ClassFactory::COMClassFactory<wenshuextW11::ExplorerCommand::MainExplorerCommand>>().as(riid, ppv);
     }
     else
     {

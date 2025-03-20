@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "EnumExplorerCommand.h"
 
-using namespace Win11ContextMenuDemo::ExplorerCommand;
+using namespace wenshuextW11::ExplorerCommand;
 
 EnumExplorerCommand::EnumExplorerCommand(vector<winrt::com_ptr<IExplorerCommand>> commands)
     : sub_commands(move(commands)) {}

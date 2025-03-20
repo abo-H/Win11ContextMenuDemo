@@ -1,11 +1,11 @@
 #include "pch.h"
 #include "Sub1ExplorerCommand.h"
 
-using namespace Win11ContextMenuDemo::ExplorerCommand;
+using namespace wenshuextW11::ExplorerCommand;
 
 Sub1ExplorerCommand::Sub1ExplorerCommand()
 {
-    SetTitleResourceID(ID_WIN11CONTEXTMENUDEMO_SUB1);
+    SetTitleResourceID(ID_wenshuextW11_SUB1);
     SetIconFileName(L"\\Assets\\Sub1Icon.ico");
 }
 

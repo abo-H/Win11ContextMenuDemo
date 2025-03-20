@@ -2,7 +2,7 @@
 #include "BaseExplorerCommand.h"
 #include "Path.h"
 
-using namespace Win11ContextMenuDemo::ExplorerCommand;
+using namespace wenshuextW11::ExplorerCommand;
 
 extern HMODULE g_module;
 
@@ -50,7 +50,7 @@ const wstring BaseExplorerCommand::GetIconPath()
 	if (iconFileName == L"") {
 		return L"";
 	}
-	return Win11ContextMenuDemo::Path::GetContextMenuDirectoryPath() + iconFileName;
+	return wenshuextW11::Path::GetContextMenuDirectoryPath() + iconFileName;
 }
 
 void BaseExplorerCommand::SetTitleResourceID(UINT id)

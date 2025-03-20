@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "BaseExplorerCommand.h"
 
-namespace Win11ContextMenuDemo::ExplorerCommand
+namespace wenshuextW11::ExplorerCommand
 {
     // Sub1ExplorerCommand 是一个实现子菜单的类，继承自 BaseExplorerCommand。
     // Sub1ExplorerCommand is a class that implements a submenu, inheriting from BaseExplorerCommand.

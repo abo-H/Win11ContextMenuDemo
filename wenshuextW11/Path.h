@@ -5,12 +5,12 @@
  * @Date: 2025-03-19 21:39:41
  * @LastEditors: Abo
  * @LastEditTime: 2025-03-19 23:40:36
- * @FilePath: \Win11ContextMenuDemo\Win11ContextMenuDemo\Path.h
+ * @FilePath: \wenshuextW11\wenshuextW11\Path.h
  */
 #pragma once
 #include "pch.h"
 
-namespace Win11ContextMenuDemo::Path
+namespace wenshuextW11::Path
 {
     // 获取应用程序所在目录的路径。
     // Retrieves the path of the directory where the application is located.

@@ -35,7 +35,7 @@ Create and configure the AppxManifest.xml file, which is a crucial part for gene
 3. **Generate Sparse Package**:
 Use the following command to generate the Sparse package:
     ```
-    makeappx.exe pack /d <Your AppxPath> /p <Your AppxPath>\Win11ContextMenuDemo.msix
+    makeappx.exe pack /d <Your AppxPath> /p <Your AppxPath>\wenshuextW11.msix
     ```
 
 4. **Create a Self-Signed Certificate**:
@@ -67,7 +67,7 @@ Export the self-signed certificate as a .pfx file:
 8. **Sign the Sparse Package**:
 Sign the Sparse package with the following command:
     ```
-    signtool.exe sign /fd SHA256 /a /f <Your AppxPath>\Win11ContextMenu.pfx /t http://timestamp.digicert.com /p <Your Password> <Your AppxPath>\Win11ContextMenuDemo.msix
+    signtool.exe sign /fd SHA256 /a /f <Your AppxPath>\Win11ContextMenu.pfx /t http://timestamp.digicert.com /p <Your Password> <Your AppxPath>\wenshuextW11.msix
     ```
     To enter debug mode, add the `/debug` parameter.
 <br>
